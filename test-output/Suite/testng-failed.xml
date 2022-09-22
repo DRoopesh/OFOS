@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="org.sdet40.genericUtility.ListenerImplementation"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" parallel="tests" name="Test(failed)">
     <classes>
       <class name="org.sdet40.genericUtility.AddResturantTestCaseTest">
@@ -15,6 +16,19 @@
           <include name="classTearDown"/>
         </methods>
       </class> <!-- org.sdet40.genericUtility.AddResturantTestCaseTest -->
+=======
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="org.doordash.testcases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest">
+        <methods>
+          <include name="classSetup"/>
+          <include name="methodSetUp2"/>
+          <include name="methodSetUp1"/>
+          <include name="TestCase1Test"/>
+          <include name="classTearDown"/>
+        </methods>
+      </class> <!-- org.doordash.testcases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest -->
+>>>>>>> branch 'OFOS-1' of https://github.com/DRoopesh/OFOS.git
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

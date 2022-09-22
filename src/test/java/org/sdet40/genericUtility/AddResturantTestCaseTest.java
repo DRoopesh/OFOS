@@ -8,11 +8,7 @@ import org.doordash.ObjectRepository.RestaurantPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.sdet40.genericUtility.BaseClass;
-import org.testng.Assert;
-import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
-import org.testng.asserts.IAssert;
 
 public class AddResturantTestCaseTest extends BaseClass {
 	WebDriver driver;
@@ -20,19 +16,20 @@ public class AddResturantTestCaseTest extends BaseClass {
 	@Test
 	public void AddResturantTest() throws InterruptedException {
 		// TODO Auto-generated method stub
-		Map<String, String> map = excelUtility.getDataFromExcelInMap("AddingResturant");
-		String URL = map.get("URL");
-		String UN = map.get("UN");
-		String PWD = map.get("PWD");
+	//	Map<String, String> map = excelUtility.getDataFromExcelInMap("AddingResturant");
+		String URL = map.get("adminurl");
+		String UN = map.get("adminusername");
+		String PWD = map.get("adminpassword");
 		String value = map.get("Dropdownvalue");
 		String Dropdowntext = map.get("Dropdowntext");
 		String Dropdownvalue2 = map.get("Dropdownvalue2");
 		String Dropdowntext2 = map.get("Dropdowntext2");
-		String Address = map.get("Address");
-		String Restname = map.get("Resturant_name");
-		String Mobno = map.get("mob_no");
-		String Email = map.get("Email");
+		String Address = map.get("deliveryAddress");
+		String Restname = map.get("restaurant");
+		String Mobno = map.get("phoneNumber");
+		String Email = map.get("email");
 		String Website = map.get("Website");
+		System.out.println(" Website ");
     	webDriverUtility = new org.sdet40.genericUtility.WebDriverUtility();
 		driver = webDriverUtility.openBrowserWithApplication("chrome", 10, URL);
 		Admin=new AdminHomePage(driver);
