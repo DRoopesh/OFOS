@@ -24,8 +24,8 @@ public class BaseClass {
 	private String timeouts;
 	protected Map<String, String> map;
 	private String browser;
-	private String username;
-	private String password;
+	protected String username;
+	protected String password;
 	private String userurl;
 	protected WebDriverUtility webDriverUtility;
 	protected ExcelUtility excelUtility;
@@ -33,14 +33,13 @@ public class BaseClass {
 	protected JavaUtility javaUtility;
 	protected LoginPage loginPage;
 	protected HomePage homePage;
-	protected RestaurantPage restaurantPage;
+	protected RestaurantPage RestaurantPage;
 	protected PickYourFavFoodPage pickYourFavFoodPage;
 	protected OrderAndPayPage orderAndPayPage;
 	protected MyOrdersPage myOrdersPage;
-	protected AdminHomePage adminHomePage;
+	protected AdminHomePage Admin;
 	protected AdminOrdersPage adminOrdersPage;
-	protected SoftAssert soft;
-
+	protected SoftAssert soft; 
 	public static WebDriver sdriver;
 	public static JavaUtility sjavaUtility;
 	/**
@@ -92,13 +91,14 @@ public class BaseClass {
 		
 		//Create object for common POM repositories
 		loginPage = new LoginPage(driver); 
-		restaurantPage = new RestaurantPage(driver);
+		RestaurantPage = new RestaurantPage(driver);
 		homePage = new HomePage(driver);
-		adminHomePage = new AdminHomePage(driver);
+		Admin= new AdminHomePage(driver);
 		adminOrdersPage = new AdminOrdersPage(driver);
 		pickYourFavFoodPage = new PickYourFavFoodPage(driver);
 		orderAndPayPage = new OrderAndPayPage(driver);
 		myOrdersPage = new MyOrdersPage(driver);
+		AdminHomePage Admin = new AdminHomePage(driver);
 	}
 		//Login to the application
 		/**
