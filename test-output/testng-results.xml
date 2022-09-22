@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-22T14:23:53 IST" name="Suite" finished-at="2022-09-22T14:24:11 IST" duration-ms="18678">
+    <groups>
+    </groups>
+    <test started-at="2022-09-22T14:23:53 IST" name="Test" finished-at="2022-09-22T14:24:11 IST" duration-ms="18678">
+      <class name="org.sdet40.genericUtility.AddResturantTestCaseTest">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:org.sdet40.genericUtility.AddResturantTestCaseTest@1b11171f]" started-at="2022-09-22T14:23:53 IST" name="classSetup" finished-at="2022-09-22T14:23:56 IST" duration-ms="2819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetup -->
+        <test-method is-config="true" signature="methodSetUp1()[pri:0, instance:org.sdet40.genericUtility.AddResturantTestCaseTest@1b11171f]" started-at="2022-09-22T14:23:56 IST" name="methodSetUp1" finished-at="2022-09-22T14:23:56 IST" duration-ms="307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp1 -->
+        <test-method signature="AddResturantTest()[pri:0, instance:org.sdet40.genericUtility.AddResturantTestCaseTest@1b11171f]" started-at="2022-09-22T14:23:56 IST" name="AddResturantTest" finished-at="2022-09-22T14:24:11 IST" duration-ms="15049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddResturantTest -->
+        <test-method is-config="true" signature="methodSetUp2()[pri:0, instance:org.sdet40.genericUtility.AddResturantTestCaseTest@1b11171f]" started-at="2022-09-22T14:24:11 IST" name="methodSetUp2" finished-at="2022-09-22T14:24:11 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp2 -->
+        <test-method is-config="true" signature="classTearDown()[pri:0, instance:org.sdet40.genericUtility.AddResturantTestCaseTest@1b11171f]" started-at="2022-09-22T14:24:11 IST" name="classTearDown" finished-at="2022-09-22T14:24:11 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classTearDown -->
+      </class> <!-- org.sdet40.genericUtility.AddResturantTestCaseTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

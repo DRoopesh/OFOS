@@ -10,9 +10,9 @@ public class PlaceOrderAndChangeOrderStatusTest extends BaseClass{
 	@Test(groups = "sanity")
 	public void textcase2Test() throws InterruptedException {
 		webDriverUtility.verifyPage(soft, homePage.getHomePageText(), map.get("userHomePageText"));
-		restaurantPage.clickRestaurantTab();
-		webDriverUtility.verifyPage(soft, restaurantPage.getResturantPageText(), map.get("userrestaurantsPageText"));
-		restaurantPage.clickOnRestaurantMenu(map.get("restaurant"), webDriverUtility);
+		RestaurantPage.clickRestaurantTab();
+		webDriverUtility.verifyPage(soft, RestaurantPage.getResturantPageText(), map.get("userrestaurantsPageText"));
+		RestaurantPage.clickOnRestaurantMenu(map.get("restaurant"), webDriverUtility);
 		webDriverUtility.verifyPage(soft, pickYourFavFoodPage.getDishSelectPageText(), map.get("userdishesmenuPageText"));
 		pickYourFavFoodPage.addDishToCart(map.get("dishName"), webDriverUtility);
 		pickYourFavFoodPage.ClickCheckOut();
@@ -27,11 +27,11 @@ public class PlaceOrderAndChangeOrderStatusTest extends BaseClass{
 		webDriverUtility.logoutAction(driver);
 		webDriverUtility.verifyPage(soft, loginPage.getLoginPageText(),map.get("userLoginPageText"));
 		webDriverUtility.navigateTheApplication(driver, map.get("adminurl"));
-		webDriverUtility.verifyPage(soft, adminHomePage.getAdminLoginPageText(), map.get("adminLoginPageText"));
+		webDriverUtility.verifyPage(soft, Admin.getAdminLoginPageText(), map.get("adminLoginPageText"));
 		webDriverUtility.implictlyWait(driver, Timeouts);
 		webDriverUtility.Login(driver, map.get("adminusername"), map.get("adminpassword"));
-		webDriverUtility.verifyPage(soft, adminHomePage.getAdminDashPageText(), map.get("adminDashPageText"));
-		adminHomePage.clickOnOrdersBtn();
+		webDriverUtility.verifyPage(soft, Admin.getAdminDashPageText(), map.get("adminDashPageText"));
+		Admin.clickOnOrdersBtn();
 		webDriverUtility.verifyPage(soft, adminOrdersPage.getAdminOrdersPageText(), map.get("adminOrdersPageText"));		
 		adminOrdersPage.clickOnEditLastOrderStatus();
 		webDriverUtility.verifyPage(soft, adminOrdersPage.getAdminEditOrdersPageText(), map.get("adminEditOrderPageText"));			
@@ -50,13 +50,13 @@ public class PlaceOrderAndChangeOrderStatusTest extends BaseClass{
 		adminOrdersPage.closeOrderStsWindow();
 		webDriverUtility.switchToparentwindow(driver);
 		webDriverUtility.verifyPage(soft, adminOrdersPage.getAdminEditOrdersPageText(), map.get("adminEditOrderPageText"));	
-		adminHomePage.clickOnOrdersBtn();
+		Admin.clickOnOrdersBtn();
 		webDriverUtility.verifyPage(soft, adminOrdersPage.getAdminOrdersPageText(), map.get("adminOrdersPageText"));
 		webDriverUtility.implictlyWait(driver, Timeouts);
 		webDriverUtility.verifyResult(soft, adminOrdersPage.getLatestOrderStatus(), map.get("expOrderStatus"));
 		Reporter.log("Order status changed to: "+adminOrdersPage.getLatestOrderStatus(), true);
-		adminHomePage.adminLogOutAction();
-		webDriverUtility.verifyPage(soft, adminHomePage.getAdminLoginPageText(), map.get("adminLoginPageText"));
+		Admin.adminLogOutAction();
+		webDriverUtility.verifyPage(soft, Admin.getAdminLoginPageText(), map.get("adminLoginPageText"));
 		webDriverUtility.verifyAssert(soft);
 		
 	}

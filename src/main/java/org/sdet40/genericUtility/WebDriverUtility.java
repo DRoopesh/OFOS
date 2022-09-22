@@ -102,10 +102,10 @@ public class WebDriverUtility {
 	 * @param url
 	 * @return 
 	 */
-	public WebDriver openBrowserWithApplication(String browser, Long timeouts, String url) {
+	public WebDriver openBrowserWithApplication(String browser, long l, String url) {
 		WebDriver driver = launchTheBrowser(browser);
 		maximizeTheBrowser(driver);
-		implictlyWait(driver,timeouts);
+		implictlyWait(driver,l);
 		navigateTheApplication(driver, url);
 		return driver;
 	}
@@ -266,6 +266,26 @@ public class WebDriverUtility {
 		String tempPath = ts.getScreenshotAs(OutputType.BASE64);
 		return tempPath;
 				
+	}
+	/*
+	 * This method use for dropdownhandling
+	 */
+	
+	public void DropdownByText(WebElement element, String value)
+
+	{
+		Select s = new Select(element);
+		s.selectByVisibleText(value);
+	}
+
+	public void DropdownByValue(WebElement element, String value) {
+		Select s1 = new Select(element);
+		s1.selectByValue(value);
+	}
+
+	public void DropdownByIndex(WebElement element, String value) {
+		Select s2 = new Select(element);
+		s2.selectByIndex(0);
 	}
 }
 
