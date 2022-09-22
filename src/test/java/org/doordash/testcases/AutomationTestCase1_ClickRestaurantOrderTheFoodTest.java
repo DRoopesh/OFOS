@@ -1,4 +1,4 @@
-//user login ---> click on restaurant---> picck restaurant---> select dish----> order---> My Cart ----> delete the ordered food and logout 
+//user login ---> click on restaurant---> pick restaurant---> select dish----> order---> My Cart ----> delete the ordered food and logout 
 package org.doordash.testcases;
 
 import java.io.IOException;
@@ -11,7 +11,6 @@ public class AutomationTestCase1_ClickRestaurantOrderTheFoodTest extends BaseCla
 	@Test
 
 	public void TestCase1Test() throws IOException {
-		
 		String username = fileUtility.getDataFromPropertyFile("username");
 		String password = fileUtility.getDataFromPropertyFile("password");
 		loginPage.loginAction(username, password);
