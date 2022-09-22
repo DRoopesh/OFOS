@@ -24,8 +24,8 @@ public class BaseClass {
 	private String timeouts;
 	protected Map<String, String> map;
 	private String browser;
-	private String username;
-	private String password;
+	protected String username;
+	protected String password;
 	private String userurl;
 	protected WebDriverUtility webDriverUtility;
 	protected ExcelUtility excelUtility;
