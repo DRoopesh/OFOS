@@ -34,3 +34,4 @@ public void clickOnRestaurantMenu(String restaurant, WebDriverUtility webDriverU
 	webDriverUtility.convertDynamicXpathToElement(restaurantMenuDynamicXpath, restaurant, driver).click();
 }
 }
+	

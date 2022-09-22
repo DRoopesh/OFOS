@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
+
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 22 10:57:05 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>20 seconds (20800 ms)</td>
+
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
 <td>Started on:</td><td>Thu Sep 22 10:01:03 IST 2022</td>
 </tr>
 <tr><td>Total time:</td><td>52 seconds (52006 ms)</td>
+
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,14 +75,25 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
+
+<td title='AutomationTestCases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest.TestCase1Test()'><b>TestCase1Test</b><br>Test class: AutomationTestCases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest</td>
+<td></td>
+<td>6</td>
+<td>AutomationTestCases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest@29215f06</td></tr>
+
 <td title='org.doordash.testcases.PlaceOrderAndChangeOrderStatusTest.classSetup()'><b>classSetup</b><br>Test class: org.doordash.testcases.PlaceOrderAndChangeOrderStatusTest</td>
 <td><div><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
   (Session info: chrome=105.0.5195.127)
@@ -313,6 +332,7 @@ Session ID: 03704bddaadf63dab21d7c7536329b92
 </pre></div></td>
 <td>0</td>
 <td>org.doordash.testcases.PlaceOrderAndChangeOrderStatusTest@27f981c6</td></tr>
+
 </table><p>
 </body>
 </html>
