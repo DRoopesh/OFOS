@@ -53,7 +53,6 @@ public class AddResturantTestCaseTest extends BaseClass {
 		RestaurantPage.Address1(Address);
 		driver.findElement(By.xpath("//input[@name='file']"))
 		.sendKeys(IConstantPath.PROJECT_PATH + "/src/test/resources/screenshot.png");
-	//	Assert.fail();
 		RestaurantPage.Submit1();
 		webDriverUtility.closeTheBrowser(driver);
 	}
