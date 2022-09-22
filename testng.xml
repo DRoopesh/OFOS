@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite parallel="classes" name="Suite">
 <listeners>
 <listener class-name="org.sdet40.genericUtility.ListenerImplementation"></listener>
@@ -9,4 +10,15 @@
       <class name="org.doordash.testcases.AddDishCartTest1"/>
     </classes>
   </test> <!-- Test1 -->
+=======
+<suite name="Suite">
+<listeners>
+<listener class-name="org.sdet40.genericUtility.ListenerImplementation"></listener>
+</listeners>
+  <test parallel="tests" thread-count="2" name="Test">
+    <classes>
+      <class name="org.sdet40.genericUtility.AddResturantTestCaseTest"/>
+    </classes>
+  </test> <!-- Test -->
+>>>>>>> branch 'OFOS-1' of https://github.com/DRoopesh/OFOS.git
 </suite> <!-- Suite -->

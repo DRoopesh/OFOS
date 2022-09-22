@@ -9,4 +9,5 @@ public interface IConstantPath {
 	String PROPERTYFILE_PATH = PROJECT_PATH+"/src/test/resources/CommonDataFile.properties";
 	String EXCELFILE_PATH = PROJECT_PATH+"/src/test/resources/TestData.xlsx";
 	String DB_URL = "jdbc:mysql://localhost:3306/tytestdb";
+
 }

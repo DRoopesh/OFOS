@@ -7,15 +7,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
-import org.doordash.ObjectRepository.EdishNames;
-import org.doordash.ObjectRepository.ErestaurantNames;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -23,7 +19,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.google.common.io.Files;
@@ -102,10 +97,10 @@ public class WebDriverUtility {
 	 * @param url
 	 * @return 
 	 */
-	public WebDriver openBrowserWithApplication(String browser, Long timeouts, String url) {
+	public WebDriver openBrowserWithApplication(String browser, long l, String url) {
 		WebDriver driver = launchTheBrowser(browser);
 		maximizeTheBrowser(driver);
-		implictlyWait(driver,timeouts);
+		implictlyWait(driver,l);
 		navigateTheApplication(driver, url);
 		return driver;
 	}
@@ -266,6 +261,26 @@ public class WebDriverUtility {
 		String tempPath = ts.getScreenshotAs(OutputType.BASE64);
 		return tempPath;
 				
+	}
+	/*
+	 * This method use for dropdownhandling
+	 */
+	
+	public void DropdownByText(WebElement element, String value)
+
+	{
+		Select s = new Select(element);
+		s.selectByVisibleText(value);
+	}
+
+	public void DropdownByValue(WebElement element, String value) {
+		Select s1 = new Select(element);
+		s1.selectByValue(value);
+	}
+
+	public void DropdownByIndex(WebElement element, String value) {
+		Select s2 = new Select(element);
+		s2.selectByIndex(0);
 	}
 }
 

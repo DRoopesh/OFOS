@@ -19,7 +19,7 @@ public class ListenerImplementation implements ITestListener{
 		ExtentSparkReporter spark = new ExtentSparkReporter("./extentReport/extentreport.html");
 		spark.config().setDocumentTitle("Document Tile - SDET 40");
 		spark.config().setReportName("Report Name - SDET 40");
-		spark.config().setTheme(Theme.STANDARD);
+		spark.config().setTheme(Theme.DARK);
 		
 		reports = new ExtentReports();
 		reports.attachReporter(spark);
