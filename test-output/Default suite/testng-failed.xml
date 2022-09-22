@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+
       <class name="AutomationTestCases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest">
         <methods>
           <include name="classSetup"/>
@@ -12,6 +13,17 @@
           <include name="classTearDown"/>
         </methods>
       </class> <!-- AutomationTestCases.AutomationTestCase1_ClickRestaurantOrderTheFoodTest -->
+
+      <class name="org.doordash.testcases.PlaceOrderAndChangeOrderStatusTest">
+        <methods>
+          <include name="classSetup"/>
+          <include name="methodSetUp2"/>
+          <include name="methodSetUp1"/>
+          <include name="textcase2Test"/>
+          <include name="classTearDown"/>
+        </methods>
+      </class> <!-- org.doordash.testcases.PlaceOrderAndChangeOrderStatusTest -->
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
